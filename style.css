@@ -20,19 +20,20 @@ font-family: 'Ubuntu', sans-serif; */
 
 }
 
+
+
 main {
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
     height: 100vh;
-    /* overflow: hidden; */
 }
-
-
 
 section {
     height: 100vh;
     scroll-snap-align: start;
 }
+
+
 
 /* Navbar */
 .toggle-buttons {
@@ -61,10 +62,9 @@ header {
     background-image: linear-gradient(#cd6d29, #c430ce);
 }
 
-/* .sidebar nav {
-    padding: 1em;
-    margin: 3em 0;
-} */
+.sidebarGo {
+    font-family: 'Fira Sans', sans-serif;
+}
 
 .sidebar nav li {
     list-style: none;
@@ -351,10 +351,10 @@ p {
     margin-left: 3px;
 }
 
-.sidebarGo {
+/* .sidebarGo {
     transform: translate(-443px, 0px);
     position: absolute;
-}
+} */
 
 .fa-moon {
     position: absolute;
@@ -425,10 +425,10 @@ button:hover {
 
 @media (max-width:800px) {
 
-    .sidebar {
+    .sidebarGo {
 
-        /* transform: translate(-443px, 0px); */
-        /* position: absolute; */
+        transform: translate(-443px, 0px);
+        position: absolute;
     }
 
     header {
