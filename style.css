@@ -11,38 +11,60 @@ font-family: 'Ubuntu', sans-serif; */
     --text-black-700: #504e70;
 }
 
+
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+
 }
 
-.main {
+main {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
     height: 100vh;
-    width: 100vw;
+    /* overflow: hidden; */
 }
 
-body {
 
-    color: var(--bg-black-100);
-    /* background-color: var(--text-black-700); */
-    background-image: linear-gradient(#4ca998, #9d6ca3);
+
+section {
+    height: 100vh;
+    scroll-snap-align: start;
+}
+
+/* Navbar */
+.toggle-buttons {
+    display: none;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+header {
+    position: sticky;
+    top: 0;
 }
 
 .sidebar {
+
     color: var(--bg-black-50);
-    width: 233px;
+    /* width: 233px; */
     font-family: 'Fira Sans', sans-serif;
-    height: 100vh;
-    background-color: var(--text-black-900);
-    transition: transform 0.3s ease-in-out;
-    background-image: linear-gradient(#15caa3, #8a08ae);
+    /* height: 100vh; */
+    /* background-color: var(--text-black-900); */
+    /* transition: transform 0.3s ease-in-out; */
+    background-image: linear-gradient(#cd6d29, #c430ce);
 }
 
-.sidebar nav {
+/* .sidebar nav {
     padding: 1em;
     margin: 3em 0;
-}
+} */
 
 .sidebar nav li {
     list-style: none;
@@ -51,25 +73,38 @@ body {
     color: var(--bg-black-900);
 }
 
+
 .sidebar nav li:hover {
-    background-color: #504e70;
+    background-image: linear-gradient(#33a13e, #2995a1);
     cursor: pointer;
-    padding: 10px;
+    /* border-radius: 20px; */
 }
 
 .sidebar nav li a {
     text-decoration: none;
     color: white;
-    padding: 0 5px;
+    padding: 1rem 55px;
 }
+
+/* Home Section */
+body {
+
+    color: var(--bg-black-100);
+
+    /* background-color: var(--text-black-700); */
+    background-image: linear-gradient(#0a483d, #ab2f5f);
+}
+
+
 
 .main {
     /* background-color: yellow; */
-    width: 90vw;
+    /* width: 90vw; */
 }
 
 .container {
-    display: flex;
+    /* display: flex; */
+    /* flex-direction: row; */
 }
 
 .infoContainer {
@@ -122,6 +157,13 @@ body {
 
 }
 
+/* About section */
+#aboutPage {
+    background-image: linear-gradient(#621c40, #888b27);
+    overflow: hidden;
+
+}
+
 .about {
     font-size: 2em;
 }
@@ -156,6 +198,12 @@ body {
 
 /* contact form css*/
 
+#contactPage {
+    background-image: linear-gradient(#343067, #5e2a2a);
+    overflow: hidden;
+
+}
+
 .contactform {
     font-family: 'Fira Sans', sans-serif;
     padding: 0 22px;
@@ -163,6 +211,7 @@ body {
 }
 
 .contactform h1 {
+    margin-top: 1rem;
     font-family: 'Ubuntu', sans-serif;
     /* padding: 10px 0; */
 }
@@ -198,6 +247,12 @@ body {
 }
 
 /* blog.html */
+
+#blogPage {
+    background-image: linear-gradient(#4d293c, #2c5358);
+    overflow: hidden;
+
+}
 
 .blogItem {
     font-family: 'Fira Sans', sans-serif;
@@ -308,6 +363,12 @@ p {
 }
 
 /* Projects section */
+#projectsPage {
+    background-image: linear-gradient(#a44f35, #65b4bf);
+    overflow: hidden;
+
+}
+
 .header {
     color: #04f604;
     text-shadow: red 5px 5px 12px;
@@ -364,19 +425,38 @@ button:hover {
 
 @media (max-width:800px) {
 
-    .sidebarGo {
-        transform: translate(-443px, 0px);
+    .sidebar {
+
+        /* transform: translate(-443px, 0px); */
+        /* position: absolute; */
+    }
+
+    header {
+
+        overflow: hidden;
         position: absolute;
+        width: 100%;
+    }
+
+    .toggle-buttons {
+        display: block;
     }
 
     .main {
+        /*  */
         height: 100vh;
-        width: 100vw;
+        /* width: 100vw; */
     }
 
-    .sidebar {
-        position: absolute;
+    .navbar {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 13px;
+        height: 100vh;
     }
+
+
 
     /* .newimg {
         background-image: url(yawar.png);

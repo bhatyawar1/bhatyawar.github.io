@@ -8,6 +8,10 @@ font-family: 'Ubuntu', sans-serif; */
 
 }
 
+.image>img {
+    object-fit: cover;
+}
+
 body {
     background-image: linear-gradient(to bottom, rgb(83, 214, 214), rgb(200, 57, 57));
 }
@@ -147,5 +151,6 @@ footer p {
         grid-column: 1 /3;
     }
 
+    .image img {}
 
 }
