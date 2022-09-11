@@ -5,7 +5,8 @@ const togglebtn = document.querySelector('.toggle-buttons');
 const bar = document.querySelector('.fa-bars');
 const sidebar = document.querySelector('.sidebar');
 const liItems = document.querySelectorAll('.liItems');
-togglebtn.addEventListener('click', () => {
+
+const toggleSidebar = () => {
     sidebar.classList.toggle('sidebarGo');
     if (sidebar.classList.contains('sidebarGo')) {
         bar.style.display = 'inline';
@@ -17,10 +18,13 @@ togglebtn.addEventListener('click', () => {
         }, 300)
 
     }
+}
+togglebtn.addEventListener('click', () => {
+    toggleSidebar();
 });
 liItems.forEach(element => {
     element.addEventListener('click', () => {
-        sidebar.classList.toggle('sidebarGo');
+        toggleSidebar();
     })
 })
 
