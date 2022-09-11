@@ -25,7 +25,7 @@ liItems.forEach(element => {
 })
 
 let typed = new Typed('.typing', {
-    strings: ["Student", "Web Developer", "Student", "Coder"],
+    strings: ["Student", "Web Developer", "Student", "Java Developer"],
     typeSpeed: 100,
     BackSpeed: 60,
     loop: true
