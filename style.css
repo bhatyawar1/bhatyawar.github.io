@@ -54,11 +54,8 @@ header {
 .sidebar {
 
     color: var(--bg-black-50);
-    /* width: 233px; */
     font-family: 'Fira Sans', sans-serif;
-    /* height: 100vh; */
     /* background-color: var(--text-black-900); */
-    /* transition: transform 0.3s ease-in-out; */
     background-image: linear-gradient(#cd6d29, #c430ce);
 }
 
@@ -97,18 +94,7 @@ body {
 
 
 
-.main {
-    /* background-color: yellow; */
-    /* width: 90vw; */
-}
-
-.container {
-    /* display: flex; */
-    /* flex-direction: row; */
-}
-
 .infoContainer {
-    /* background-color: orchid; */
     height: 45vh;
     width: 75vw;
     margin: 111px auto;
@@ -332,7 +318,7 @@ p {
 }
 
 
-
+/* Toggle_Buttons */
 .toggle-buttons {
     position: absolute;
     cursor: pointer;
@@ -341,7 +327,6 @@ p {
 }
 
 .fa-xmark {
-    margin-left: 179px;
     font-size: 1.5rem;
     padding: 2px;
 }
@@ -351,10 +336,7 @@ p {
     margin-left: 3px;
 }
 
-/* .sidebarGo {
-    transform: translate(-443px, 0px);
-    position: absolute;
-} */
+
 
 .fa-moon {
     position: absolute;
@@ -423,7 +405,10 @@ button:hover {
 }
 
 
-@media (max-width:800px) {
+@media (max-width:60rem) {
+    .sidebar {
+        transition: transform 0.3s ease-in-out;
+    }
 
     .sidebarGo {
 
@@ -456,14 +441,6 @@ button:hover {
         height: 100vh;
     }
 
-
-
-    /* .newimg {
-        background-image: url(yawar.png);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: contain;
-    } */
 
     .devPic img {
         top: 0;

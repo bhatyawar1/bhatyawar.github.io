@@ -7,16 +7,16 @@ const sidebar = document.querySelector('.sidebar');
 const liItems = document.querySelectorAll('.liItems');
 togglebtn.addEventListener('click', () => {
     sidebar.classList.toggle('sidebarGo');
-    // if (sidebar.classList.contains('sidebarGo')) {
-    //     bar.style.display = 'inline';
-    //     cross.style.display = 'none';
-    // } else {
-    //     bar.style.display = 'none';
-    //     setTimeout(() => {
-    //         cross.style.display = 'inline';
-    //     }, 300)
+    if (sidebar.classList.contains('sidebarGo')) {
+        bar.style.display = 'inline';
+        cross.style.display = 'none';
+    } else {
+        bar.style.display = 'none';
+        setTimeout(() => {
+            cross.style.display = 'inline';
+        }, 300)
 
-    // }
+    }
 });
 liItems.forEach(element => {
     element.addEventListener('click', () => {
