@@ -4,7 +4,7 @@ cross.style.display = 'none';
 const togglebtn = document.querySelector('.toggle-buttons');
 const bar = document.querySelector('.fa-bars');
 const sidebar = document.querySelector('.sidebar');
-
+const liItems = document.querySelectorAll('.liItems');
 togglebtn.addEventListener('click', () => {
     sidebar.classList.toggle('sidebarGo');
     // if (sidebar.classList.contains('sidebarGo')) {
@@ -17,6 +17,11 @@ togglebtn.addEventListener('click', () => {
     //     }, 300)
 
     // }
+});
+liItems.forEach(element => {
+    element.addEventListener('click', () => {
+        sidebar.classList.toggle('sidebarGo');
+    })
 })
 
 let typed = new Typed('.typing', {
