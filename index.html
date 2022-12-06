@@ -7,183 +7,220 @@
     <meta name="google-site-verification" content="ZRyAfPCztOHl0bvYhDUn-1z_iuY4mrFWmX7uqliO1WA" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <title>Yawar Abass - Web Developer, Programmer</title>
 </head>
 
 <body>
     <header>
-        <div class="sidebar sidebarGo">
+        <nav class="navbar">
+            <div class="nav-logo">
+                <h1>Portfolio</h1>
+            </div>
+            <div class="toggle-btn" onclick="toggleMenu(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
 
-            <nav>
-                <ul class="navbar">
-                    <li class="liItems"> <a href="/"><i class="fa-solid fa-house-user"></i>Home</a></li>
-                    <li class="liItems"> <a href="#aboutPage"> <i class="fa-solid fa-id-card"></i> About</a>
-                    </li>
-                    <li class="liItems"> <a href="#projectsPage"> <i class="fa-solid fa-earth-asia"></i>Projects</a>
-                    </li>
-                    <li class="liItems"> <a href="#blogPage"><i class="fa-solid fa-blog"></i>Blog</a></li>
-                    <li class="liItems"> <a href="#contactPage"> <i class="fa-solid fa-envelope"></i> Contact Me</a>
-                    </li>
-                </ul>
-            </nav>
-            <!-- <i class="fa-solid fa-moon"></i> -->
-        </div>
+            <ul class="nav-items">
+                <li class="liItems"> <a href="/">Home</a></li>
+                <li class="liItems"> <a href="#aboutPage"> About</a>
+                </li>
+                <li class="liItems"> <a href="#portfolio">Projects</a>
+                </li>
+                <li class="liItems"> <a href="#services">Services</a></li>
+                <li class="liItems"> <a href="#contact"> Contact</a>
+                </li>
+            </ul>
+        </nav>
     </header>
+
     <main>
-
         <section class="frontPage">
-            <div class="container">
-
-
-                <div class="main">
-                    <div class="toggle-buttons">
-                        <i class="fa-solid fa-bars"></i>
-                        <i class="fa-solid fa-xmark"></i>
-                    </div>
-
-                    <div class="infoContainer">
-                        <div class="devInfo">
-                            <div class="hello">Hi,My Name is </div>
-                            <div class="name">Yawar Abass</div>
-                            <div class="about"> I am a <span class="typing"> </span></div>
-                            <div class="devPic"><img src="/assets/yawar.png" alt="Yawar Abass"></div>
-                            <div class="moreabout">Currently I'm a BCA Student. Learning Web Development and DSA through
-                                Java.And I am Passionate about Coding.</div>
-                            <div class="buttons">
-                                <a href="/assets/Yawar_Abass_Resume.pdf"> <button class="btn">My CV</button></a>
-                                <a href="#contactPage"> <button class="btn">Contact Me</button></a>
-                            </div>
-
-                        </div>
-
-                    </div>
-
+            <div class="main-Container">
+                <div class="devPic">
+                    <img src="/assets/yawar.png" alt="Yawar Abass">
                 </div>
-            </div>
-        </section>
+                <div class="main-Content">
+                    <p>Web Developer</p>
+                    <h1 class="name-text">Hi, I'm <span class="name">Yawar.</h1>
 
+                    <h3 class="main-text"> And I Create What People Love</h3>
+                    <div class="social-icons">
+                        <a href="https://in.linkedin.com/in/yawar-abass"> <i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/yawar-abass"> <i class="fa-brands fa-github"></i></a>
+                        <a href="https://twitter.com/yawarabass01"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/yawarabass01/"> <i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </section>
+        <!-- ---------------About ----------- -->
         <section id="aboutPage">
-            <div class="intro">
-                <h2>About me</h2>
-                <p>I'm Currently doing my Bachelors in Computer Science from GDC Anantnag Kashmir. It is my first kind
-                    of minor project, that is building a simple Personal Portfolio. I am also learning Data Structures
-                    And Algorithms through Java.I like to work in an environment which encourages me to succeed and grow
-                    professionally where I can utilize my skills and knowledge appropriately.</p>
-                <h2>My Skills</h2>
-                <div class="skillcontainer">
-                    <div class="skillItem "> HTML: <div class="skill hundred"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <div class="img-container">
+                            <img src="./assets/yawar.png" alt=" img">
+                        </div>
+
                     </div>
-                    <div class="skillItem "> CSS: <div class="skill sfive"></div>
-                    </div>
-                    <div class="skillItem "> JavaScript: <div class="skill fifty"></div>
-                    </div>
-                    <div class="skillItem "> Core Java: <div class="skill sfive"></div>
-                    </div>
-                    <div class="skillItem "> C : <div class="skill fourty"></div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About Me</h1>
+                        <p>I'm Currently doing my Bachelors in Computer Science from GDC Anantnag Kashmir. It is my
+                            first kind
+                            of minor project, that is building a simple Personal Portfolio. I am also learning Data
+                            Structures
+                            And Algorithms through Java.I like to work in an environment which encourages me to succeed
+                            and grow
+                            professionally where I can utilize my skills and knowledge appropriately.</p>
+
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Web Developer</span> <br> Website Developmment</li>
+                                <li><span>WordPress Developer</span> <br>Website Developmment using Wordpress.</li>
+                                <li><span>Problem Solving</span> <br>Identify problems, brainstorm and analyze answers,
+                                    and implement the best solutions.</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>2022 - Current</span> <br> Web Developer Intern at Wudav</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>2020 -2023</span> <br>BCA from GDC Anantnag,Kashmir</li>
+                                <li><span>2016-2019</span> <br>HSC/Intermediate in Non-Medical+IT</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-                <h2>More info About me</h2>
-                <div class="aboutPage">
-                    <a href="/Projects/About/about.html" target="_blank"><button class="btn">click
-                            here</button></a><span> To
-                        know more about me</span>
-                </div>
-            </div>
             </div>
         </section>
-        <section id="projectsPage">
-            <div class="main">
 
-                <div class="header">
-                    <h1>My Projects</h1>
-                </div>
-                <div class="myProjects">
-                    <h2>Click on Below Projects to watch live:</h2>
-                    <ul>
-                        <li><a href="/Spotify/spotify.html" target="_blank">1. Spotify Clone</a></li>
-                        <li><a href="/Projects/AnalogClock/clock.html" target="_blank">2. Analog Clock </a></li>
-                        <li><a href="/Projects/Calculator/calc.html" target="_blank">3. Calculator</a></li>
-                        <li><a href="/Projects/CV_Viewer/cvv.html" target="_blank">4. CV Viewer</a></li>
-                        <li><a href="/Projects/Tic Tac Toe/tictac.html" target="_blank">5.Tic Tac Toe</a></li>
-                        <li><a href="/Projects/NotesApp/notes.html" target="_blank">6.Notes App</a></li>
-                    </ul>
+        <!-- ---------Services Section -------  -->
+
+        <section id="services">
+            <div class="container">
+                <h1 class="sub-title">My Services</h1>
+                <div class="services-list">
+                    <div>
+                        <i class="fa-solid fa-code"></i>
+                        <h2>Web Development</h2>
+                        <p class="web-content"> I can provide technical services in the following areas of web
+                            development- HTML5, CSS3,
+                            JavaScript, ReactJs, Nodejs, PHP, MySql, Monogb etc
+                            . I will develop your business, photography, blogging,
+                            agency, and multi-purpose WebSites that suit
+                            your business.</p>
+                        <a href="#contact">Learn more</a>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-crop-simple"></i>
+                        <h2>WordPress Development</h2>
+                        <p class="web-content">I can help you to build a responsive, professional, SEO-optimized
+                            WordPress website for your business! I offer WordPress expertise, cost-effective solutions,
+                            and excellent customer services at an affordable cost.</p>
+                        <a href="#">Learn more</a>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-mobile"></i>
+                        <h2>App Development</h2>
+                        <p class="web-content"> Currently In Progress....Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Dolores repudiandae ratione illo
+                            officiis ad dolorum optio dolorem mollitia, magni molestias voluptatum provident tempora
+                            distinctio praesentium, voluptas repellendus dicta animi dignissimos!</p>
+                        <a href="#">Learn more</a>
+                    </div>
                 </div>
             </div>
         </section>
-        <section id="blogPage">
-            <div class="main">
 
-                <div class="blogContainer">
-                    <h1>Blogs by-Yawar </h1>
-                    <div class="blogItem">
-                        <h2>Learn HTML - in fun way!</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas aliquid dignissimos maxime sit,
-                            reprehenderit natus omnis. Porro iusto amet eius, accusantium vitae culpa esse molestiae
-                            cupiditate voluptatem beatae est corporis!</p>
-                        <button class="btn btn-sm">Read More</button>
-                    </div>
-                    <div class="blogItem">
-                        <h2>Learn CSS - in fun way!</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas aliquid dignissimos maxime sit,
-                            reprehenderit natus omnis. Porro iusto amet eius, accusantium vitae culpa esse molestiae
-                            cupiditate voluptatem beatae est corporis!</p>
-                        <button class="btn btn-sm">Read More</button>
-                    </div>
-                    <div class="blogItem">
-                        <h2>Learn JavaScript - in fun way!</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas aliquid dignissimos maxime sit,
-                            reprehenderit natus omnis. Porro iusto amet eius, accusantium vitae culpa esse molestiae
-                            cupiditate voluptatem beatae est corporis!</p>
-                        <button class="btn btn-sm">Read More</button>
-                    </div>
+        <!-- ----------- Portfolio -------------  -->
+        <section id="portfolio">
 
+            <div class="container">
+                <h1 class="sub-title">My Work</h1>
+
+                <div class="work-list">
+                    <div class="work">
+                        <img src="./assets/images/work-1.png" alt="">
+                        <div class="layer">
+                            <h3>Notes App</h3>
+                            <p>This is the Notes app that I created Using HTML,CSS and JavaScript. For Learning Purpose.
+                            </p>
+                            <a href="./Projects/NotesApp/notes.html"><i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="./assets/images/work-2.png" alt="">
+                        <div class="layer">
+                            <h3>Music App</h3>
+                            <p>This is the Spotify clone app that I created Using HTML,CSS and JavaScript. For Learning
+                                Purpose.</p>
+                            <a href="/Spotify/spotify.html"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="./assets/images/work-3.png" alt="">
+                        <div class="layer">
+                            <h3>Calculator App</h3>
+                            <p>Created This Calculator App for fun.And Learning Purpose</p>
+                            <a href="./Projects/Calculator/calc.html"><i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
                 </div>
+                <a href="#" class="btn">See more</a>
             </div>
-
         </section>
 
+        <!-- --------contact me --------  -->
 
-        <section id="contactPage">
-            <div class="main">
-                <div class="contactform">
-                    <h1>Contact me for work/general Enquiries</h1>
-                    <form>
-                        <div class="mb-3">
-                            <label for="clientname" class="form-label">Name</label>
-                            <input type="name" class="form-control" id="clientname" aria-describedby="emailHelp">
+        <section id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-left">
+                        <h1 class="sub-title">Contact Me</h1>
+                        <p><i class="fa-solid fa-envelope"></i>bhatyawar0515@gmail.com</p>
+                        <div class="social-icons">
+                            <a href="https://in.linkedin.com/in/yawar-abass"> <i class="fa-brands fa-linkedin"></i></a>
+                            <a href="https://github.com/yawar-abass"> <i class="fa-brands fa-github"></i></a>
+                            <a href="https://twitter.com/yawarabass01"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="https://www.instagram.com/yawarabass01/"> <i
+                                    class="fa-brands fa-instagram"></i></a>
                         </div>
-
-                        <div class="mb-3">
-                            <label for="clientemail" class="form-label">Email address</label>
-                            <input type="email" class="form-control" id="clientemail" aria-describedby="emailHelp">
-                            <div id="emailHelp" class="form-text">We'll never share your email & phone with anyone else.
-                            </div>
-                        </div>
-
-                        <div class="mb-3">
-                            <label for="clientphone" class="form-label">Phone Number</label>
-                            <input type="phone" class="form-control" id="clientphone">
-                        </div>
-
-                        <div class="mb-3">
-                            <label for="clientenquiry" class="form-label">Enquiry</label>
-                            <input type="name" class="form-control" id="clientenquiry" aria-describedby="emailHelp">
-                        </div>
-
-                        <div class="mb-3 " id="form-check">
-                            <input type="checkbox" class="form-check-input" id="isclient">
-                            <label class="form-check-label" for="isclient">I want you to work on a project with
-                                me</label>
-                        </div>
-
-                        <button type="submit" class="btn btn-sm">Submit</button>
-                    </form>
+                    </div>
+                    <div class="contact-right">
+                        <form action="" name="submit-to-google-sheet">
+                            <input type="text" name="Name" placeholder="Your Name" required>
+                            <input type="email" name="Email" placeholder="Your Email" required>
+                            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                            <button type="submit" class="btn btn2"> Submit</button>
+                        </form>
+                        <span id="msg"></span>
+                    </div>
                 </div>
+            </div>
+            <div class="copyright">
+                <p>Copyright &#169; [2022] ByYawar.</p>
             </div>
         </section>
     </main>
 </body>
-<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
 <script src="https://kit.fontawesome.com/987b2e293c.js" crossorigin="anonymous"></script>
 
 <script src="script.js"></script>

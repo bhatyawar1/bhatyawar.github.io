@@ -1,37 +1,56 @@
 
-const cross = document.querySelector('.fa-xmark');
-cross.style.display = 'none';
-const togglebtn = document.querySelector('.toggle-buttons');
-const bar = document.querySelector('.fa-bars');
-const sidebar = document.querySelector('.sidebar');
-const liItems = document.querySelectorAll('.liItems');
+const toggleBtn = document.querySelector('.toggle-btn');
+const navigation = document.querySelector('.nav-items');
+function toggleMenu(x) {
+    x.classList.toggle("change");
+    navigation.classList.toggle('active');
 
-const toggleSidebar = () => {
-    sidebar.classList.toggle('sidebarGo');
-    if (sidebar.classList.contains('sidebarGo')) {
-        bar.style.display = 'inline';
-        cross.style.display = 'none';
-    } else {
-        bar.style.display = 'none';
-        setTimeout(() => {
-            cross.style.display = 'inline';
-        }, 300)
-
-    }
 }
-togglebtn.addEventListener('click', () => {
-    toggleSidebar();
-});
-liItems.forEach(element => {
-    element.addEventListener('click', () => {
-        toggleSidebar();
-    })
+
+const toggleButton = () => {
+    navigation.classList.toggle('active');
+    toggle.classList.toggle("change");
+}
+
+const tablinks = document.getElementsByClassName("tab-links")
+const tabContents = document.getElementsByClassName("tab-contents")
+
+function opentab(tabname) {
+    for (tablink of tablinks) {
+        tablink.classList.remove("active-link");
+    }
+    for (tabContent of tabContents) {
+        tabContent.classList.remove("active-tab");
+    }
+    event.currentTarget.classList.add('active-link')
+    document.getElementById(tabname).classList.add("active-tab")
+}
+
+const msg = document.getElementById('msg')
+const scriptURL = 'https://script.google.com/macros/s/AKfycbyq-md02U0zlGE85K3xzVJh5m1efRJpW2RxF_W4ODSLUpvzktiNmw2Hdtov91SSwRJd/exec'
+const form = document.forms['submit-to-google-sheet']
+
+form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(response => {
+            msg.innerText = "Message sent successfully"
+            setTimeout(() => {
+                msg.innerText = ''
+            }, 5000);
+            form.reset();
+        })
+        .catch(error => console.error('Error!', error.message))
 })
 
 let typed = new Typed('.typing', {
-    strings: ["Student", "Web Developer", "Student", "Java Developer"],
+    strings: ["Web Developer", " BCA-Student", "Java Developer", "Web Developer"],
     typeSpeed: 100,
     BackSpeed: 60,
     loop: true
 })
+
+
+
+
 
