@@ -1,6 +1,7 @@
 
 const toggleBtn = document.querySelector('.toggle-btn');
 const navigation = document.querySelector('.nav-items');
+
 function toggleMenu(x) {
     x.classList.toggle("change");
     navigation.classList.toggle('active');
