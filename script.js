@@ -27,6 +27,7 @@ function opentab(tabname) {
     document.getElementById(tabname).classList.add("active-tab")
 }
 
+
 const msg = document.getElementById('msg')
 const scriptURL = 'https://script.google.com/macros/s/AKfycbyq-md02U0zlGE85K3xzVJh5m1efRJpW2RxF_W4ODSLUpvzktiNmw2Hdtov91SSwRJd/exec'
 const form = document.forms['submit-to-google-sheet']
@@ -43,6 +44,10 @@ form.addEventListener('submit', e => {
         })
         .catch(error => console.error('Error!', error.message))
 })
+
+particlesJS.load('particles-js', 'assets/particles.json', function () {
+    console.log('callback - particles.js config loaded');
+});
 
 let typed = new Typed('.typing', {
     strings: ["Web Developer", " BCA-Student", "Java Developer", "Web Developer"],
