@@ -161,10 +161,11 @@ html {
 }
 
 .fa-brands {
-    font-size: 1.6em;
+    font-size: 2em;
     margin: 14px 0px 0px 14px;
     padding: 4px;
     cursor: pointer;
+    color: rgb(4, 255, 251);
 }
 
 .fa-brands:hover {
@@ -419,6 +420,7 @@ html {
     padding: 14px 50px;
     border-radius: 6px;
     text-decoration: none;
+    color: #fff;
     /* color: #080808; */
     transition: background 0.5s;
 }
