@@ -26,10 +26,15 @@ html {
     scroll-behavior: smooth;
 }
 
+body {
+    /* background-color: #0f0c27; */
+    position: relative;
+}
+
 #particles-js {
     position: absolute;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background-color: #0f0c27;
     background-image: url("");
     background-repeat: no-repeat;
@@ -51,16 +56,23 @@ html {
     display: none;
 }
 
+header {
+    position: sticky;
+    top: 0;
+}
 
 .navbar {
     font-family: 'Poppins', sans-serif;
     display: flex;
     justify-content: space-between;
+    backdrop-filter: saturate(180%) blur(10px);
+
 
 }
 
 .nav-logo {
     padding: 14px;
+    color: #fff;
 }
 
 .nav-items {
@@ -73,16 +85,14 @@ html {
     list-style: none;
     cursor: pointer;
     font-size: 1.2rem;
-    color: #fff;
 }
 
 .nav-items li a {
     position: relative;
-    color: black;
+    color: #fff;
 }
 
 .nav-items li a:hover {
-
     color: #504e70;
 }
 
@@ -192,7 +202,7 @@ html {
 #aboutPage {
     padding: 80px 0;
     /* color: #ababab; */
-    background-color: #0f0c27;
+    /* background-color: #0f0c27; */
 }
 
 .row {
@@ -206,7 +216,8 @@ html {
 }
 
 .img-container {
-    background-color: #262626;
+    /* background-color: #262626; */
+    backdrop-filter: saturate(180%) blur(15px);
     margin: 40px 0px 10px 40px;
 
     border-radius: 15px;
@@ -291,7 +302,7 @@ html {
 /* ---------Services Section -------  */
 #services {
     padding: 30px 0;
-    background-color: #0f0c27;
+    /* background-color: #0f0c27; */
 }
 
 .services-list {
@@ -302,7 +313,8 @@ html {
 }
 
 .services-list div {
-    background: #262626;
+    /* background: #262626; */
+    backdrop-filter: saturate(180%) blur(10px);
     padding: 40px;
     font-size: 13px;
     font-weight: 300;
@@ -340,7 +352,7 @@ html {
 
 #portfolio {
     padding: 50px 0;
-    background-color: #0f0c27;
+    /* background-color: #0f0c27; */
 }
 
 .work-list {
@@ -431,7 +443,7 @@ html {
 
 /* --------- contact section --------  */
 #contact {
-    background-color: #0f0c27;
+    /* background-color: #0f0c27; */
 }
 
 .contact-left {
@@ -507,6 +519,8 @@ form .btn2 {
     background: #262626;
     font-weight: 300;
     margin-top: 20px;
+    position: absolute;
+
 }
 
 /* ---------small screen----- */
@@ -539,7 +553,8 @@ form .btn2 {
         border-radius: 10px;
         transition: .3s;
         cursor: pointer;
-        background-color: #0B0C10;
+        /* background-color: #0B0C10; */
+        backdrop-filter: saturate(140%) blur(10px);
         margin-top: 5em;
     }
 
@@ -702,6 +717,9 @@ form .btn2 {
         color: #fff;
     }
 
+    .bottom-icons {
+        font-size: 1px;
+    }
 
 }
 
