@@ -56,10 +56,7 @@ body {
     display: none;
 }
 
-header {
-    position: sticky;
-    top: 0;
-}
+
 
 .navbar {
     font-family: 'Poppins', sans-serif;
@@ -518,7 +515,6 @@ form .btn2 {
     padding: 25px;
     background: #262626;
     font-weight: 300;
-    margin-top: 20px;
     position: absolute;
 
 }
@@ -529,6 +525,8 @@ form .btn2 {
     .nav-logo {
         display: none;
     }
+
+
 
     body {
 
@@ -663,6 +661,7 @@ form .btn2 {
         transition: 0.9s;
         width: 70vw;
         box-shadow: none;
+        backdrop-filter: none;
     }
 
     .navbar h1 {
