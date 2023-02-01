@@ -27,21 +27,8 @@ html {
 }
 
 body {
-    /* background-color: #0f0c27; */
-    position: relative;
-}
-
-#particles_js {
-    position: absolute;
-    width: 100%;
-    height: 100%;
     background-color: #0f0c27;
-    background-image: url("");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 50% 50%;
-    z-index: -12;
-    overflow: hidden;
+    position: relative;
 }
 
 header {
@@ -187,6 +174,19 @@ header {
 
 .devPic {
     margin-left: 14px;
+    /* animation:profile 8s ease-in-out infinite 1s; */
+
+}
+@keyframes profile{
+    0%{
+        border-radius:60% 40% 30% 70%/60% 30% 70% 40%;
+    }
+    50%{
+        border-radius:30% 60% 70% 40%/50% 60% 30% 60%;
+    }
+    100%{
+        border-radius:60% 40% 30% 70%/60% 30% 70% 40%;
+    }
 }
 
 .devPic img {
@@ -195,6 +195,7 @@ header {
     margin: 0;
     padding: 0;
     z-index: -1;
+
 }
 
 
@@ -273,10 +274,11 @@ header {
 }
 
 .web-content {
-    font-size: 14px;
+    font-size: 16px;
     font-family: 'Fira Sans', sans-serif;
     font-weight: 100;
     line-height: 24px;
+    letter-spacing: 1px;
 }
 
 .tab-links.active-link::after {

@@ -44,16 +44,9 @@ form.addEventListener('submit', e => {
         .catch(error => console.error('Error!', error.message))
 })
 
-particlesJS.load('particles-js', 'assets/particles.json', function () {
-    console.log('callback - particles.js config loaded');
-});
 
-let typed = new Typed('.typing', {
-    strings: ["Web Developer", " BCA-Student", "Java Developer", "Web Developer"],
-    typeSpeed: 100,
-    BackSpeed: 60,
-    loop: true
-})
+
+
 
 
 
