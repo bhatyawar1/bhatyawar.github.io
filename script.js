@@ -3,13 +3,14 @@ const toggleBtn = document.querySelector('.toggle-btn');
 const navigation = document.querySelector('.nav-items');
 
 function toggleMenu(x) {
-    x.classList.toggle("change");
+    toggleBtn.classList.toggle("change");
     navigation.classList.toggle('active');
+    toggleButton()
 
 }
 
 const toggleButton = () => {
-    navigation.classList.toggle('active');
+    // navigation.classList.toggle('active');
     toggle.classList.toggle("change");
 }
 

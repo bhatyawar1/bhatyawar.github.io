@@ -49,8 +49,6 @@ header {
     display: none;
 }
 
-
-
 .navbar {
     font-family: 'Poppins', sans-serif;
     display: flex;
@@ -62,7 +60,11 @@ header {
 
 .nav-logo {
     padding: 14px;
-    color: #fff;
+    color: #ff004f;
+    letter-spacing:4px;
+    font-weight:bold;
+    cursor:pointer;
+    font-family: 'Source Code Pro', monospace;
 }
 
 .nav-items {
@@ -83,7 +85,7 @@ header {
 }
 
 .nav-items li a:hover {
-    color: #504e70;
+    color: #ff004f;
 }
 
 .nav-items li a::after {
@@ -169,7 +171,7 @@ header {
 }
 
 .fa-brands:hover {
-    color: #2f2fa2;
+    color:#ff004f;
 }
 
 .devPic {
@@ -471,16 +473,17 @@ header {
     margin-right: 15px;
     font-size: 25px;
 }
-
 .contact-left .social-icons a {
     text-decoration: none;
     font-size: 20px;
     margin-right: 15px;
-    color: #ababab;
+    color: #fff;
     display: inline-block;
     transition: transform 0.5s;
 }
-
+.social-icons a i{
+    color:white;
+}
 .contact-left .social-icons a:hover {
     color: #ff004f;
     transform: translateY(-5px);
@@ -612,7 +615,7 @@ form .btn2 {
         display: inline-block;
         position: absolute;
         left: 19px;
-        top: 5px;
+        top: 19px;
     }
 
     .bar1,
@@ -647,6 +650,7 @@ form .btn2 {
         margin: 0;
         padding: 0;
         margin-top: 34px;
+        height:100vh;
     }
 
     .nav-items.active {
@@ -669,13 +673,16 @@ form .btn2 {
         align-items: center;
         position: absolute;
         background-color: #151c23;
-        margin-top: -12px;
+        top:-12px;
+        margin-top:-13px
         transition: 0.9s;
         width: 70vw;
+        /*  */
         box-shadow: none;
         z-index: 99;
         backdrop-filter: none;
     }
+
 
     .navbar h1 {
         display: none;
@@ -731,6 +738,7 @@ form .btn2 {
 
     .bottom-icons {
         font-size: 1px;
+        color:white;
     }
 
 }
@@ -741,4 +749,17 @@ form .btn2 {
     color: #61b752;
     margin-top: -40px;
     display: block;
+}
+
+.mail{
+    color:white;
+    text-decoration:none;    
+    padding-left:13px;
+}
+.mail i{
+    padding-right:7px;
+}
+.mail:hover{
+    color:gray;
+
 }
