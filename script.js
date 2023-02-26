@@ -28,6 +28,8 @@ function opentab(tabname) {
     document.getElementById(tabname).classList.add("active-tab")
 }
 
+
+// contact form 
 const msg = document.getElementById('msg')
 const scriptURL = 'https://script.google.com/macros/s/AKfycbyq-md02U0zlGE85K3xzVJh5m1efRJpW2RxF_W4ODSLUpvzktiNmw2Hdtov91SSwRJd/exec'
 const form = document.forms['submit-to-google-sheet']

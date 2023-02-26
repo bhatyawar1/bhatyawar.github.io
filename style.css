@@ -330,7 +330,7 @@ header {
     color: #fff;
 }
 
-.services-list div i {
+.services-list div img {
     font-size: 50px;
     margin-bottom: 30px;
 }
@@ -468,7 +468,7 @@ header {
 
 }
 
-.contact-left p i {
+.contact-left p img {
     color: #ff004f;
     margin-right: 15px;
     font-size: 25px;
@@ -481,8 +481,10 @@ header {
     display: inline-block;
     transition: transform 0.5s;
 }
-.social-icons a i{
-    color:white;
+.social-icons a img:hover{
+    color: #ff004f;
+    transform: scale(.9);
+    transition: ease-in-out .2s;
 }
 .contact-left .social-icons a:hover {
     color: #ff004f;
@@ -536,7 +538,7 @@ form .btn2 {
 
 /* ---------small screen----- */
 
-@media screen and (max-width:608px) {
+@media screen and (max-width:885px) {
     .nav-logo {
         display: none;
     }
